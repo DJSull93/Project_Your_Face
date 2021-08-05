@@ -9,8 +9,8 @@ import tensorflow as tf
 
 
 batch_size = 32
-img_height = 100
-img_width = 100
+img_height = 224
+img_width = 224
 epochs = 1000
 img_shape = (img_height , img_width, 3)
 
@@ -23,11 +23,11 @@ x_test_MW = np.load(path+'MW_x_test.npy')
 y_train_MW = np.load(path+'MW_y_train.npy')
 y_test_MW = np.load(path+'MW_y_test.npy')
 
-model = InceptionResNetV2(weights='imagenet', 
+model = ResNet101V2(weights='imagenet', 
                 include_top=False,
                 input_shape=img_shape)
 
-model.trainable=False
+model.trainable=True
 
 
 poolinglyaer = GlobalAveragePooling2D()
