@@ -14,7 +14,7 @@ train_datagen = ImageDataGenerator(
 
 test_datagen = ImageDataGenerator(rescale=1./255)
 
-base_size = 150
+base_size = 100
 color = 3
 
 xy_train = train_datagen.flow_from_directory(
@@ -67,10 +67,10 @@ y_train = np.concatenate((y_train, y_argmented)) #
 print(x_train.shape, x_test.shape) # (62031, 150, 150, 1) (10321, 150, 150, 1)
 print(y_train.shape, y_test.shape) # (62031, 42) (10321, 42)
 
-np.save('_save/_NPY/JOB_x_train', arr=xy_train[0][0])
-np.save('_save/_NPY/JOB_x_test', arr=xy_test[0][0])
-np.save('_save/_NPY/JOB_y_train', arr=xy_train[0][1])
-np.save('_save/_NPY/JOB_y_test', arr=xy_test[0][1])
+np.save('_save/_NPY/JOB_x_train', arr=x_train)
+np.save('_save/_NPY/JOB_x_test', arr=x_test)
+np.save('_save/_NPY/JOB_y_train', arr=y_train)
+np.save('_save/_NPY/JOB_y_test', arr=y_test)
 
 # # print(xy_train[0][0]) # 
 # # print(xy_train[0][1]) # 
