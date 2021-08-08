@@ -47,6 +47,7 @@ Y_test = Y_test.reshape(17240, 3, 11)
 
 # print(Y_train.shape)
 # print(Y_train[0])
+####################################################
 
 # # 2. model
 from tensorflow.keras.models import Model
