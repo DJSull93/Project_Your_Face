@@ -12,10 +12,9 @@ train_datagen = ImageDataGenerator(
     fill_mode='nearest'
 )
 
-base_size = 100
+base_size = 120
 color = 3
 
-# 통상적으로 테스트셋은 증폭하지 않음
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 x_pred = train_datagen.flow_from_directory(

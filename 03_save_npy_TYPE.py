@@ -6,15 +6,15 @@ train_datagen = ImageDataGenerator(
     vertical_flip=True,
     width_shift_range=0.1,
     height_shift_range=0.1,
-    rotation_range=5,
-    zoom_range=0.2,
+    rotation_range=4,
+    zoom_range=0.1,
     fill_mode='nearest',
     validation_split=0.2
 )
 
 test_datagen = ImageDataGenerator(rescale=1./255)
 
-base_size = 100
+base_size = 120
 color = 3
 
 xy_train = train_datagen.flow_from_directory(
@@ -43,7 +43,7 @@ y_train = xy_train[0][1]
 x_test = xy_test[0][0]
 y_test = xy_test[0][1]
 
-augment_size = 8600
+augment_size = 38600
 
 randidx = np.random.randint(x_train.shape[0], size=augment_size) # take 31000 feature from train in random
 
