@@ -122,7 +122,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 es = EarlyStopping(monitor='val_loss', patience=4, mode='auto', 
         verbose=2, restore_best_weights=True)
 
-###################################################################
+
 import datetime
 date = datetime.datetime.now()
 date_time = date.strftime("%m%d_%H%M")
